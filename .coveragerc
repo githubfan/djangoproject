@@ -1,0 +1,6 @@
+[html]
+directory = coverage_html_report
+
+
+[run]
+include = djangoProject/*, pages/*

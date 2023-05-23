@@ -1,0 +1,22 @@
+<!-- my_template.html -->
+<h1>My Model Instances</h1>
+
+{% if my_models %}
+    {% for my_model in my_models %}
+        <!-- Display existing model instances -->
+        <p>Field 1: {{ my_model.field1 }}</p>
+        <p>Field 2: {{ my_model.field2 }}</p>
+        <p>Field 3: {{ my_model.field3 }}</p>
+        <hr>
+    {% endfor %}
+{% else %}
+    <p>No model instances found.</p>
+{% endif %}
+
+<!-- Display the form -->
+<h2>Create a New Instance</h2>
+<form method="POST" action="{% url 'my_model_view' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create</button>
+</form>
