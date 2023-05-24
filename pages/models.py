@@ -1,6 +1,5 @@
 from django.db import models
 
-class UserInput(models.Model):
-    field1 = models.CharField(max_length=100)
-    field2 = models.IntegerField()
-    field3 = models.DateField()
+class Member(models.Model):
+    firstname = models.CharField(max_length=255) # creates text field with max 255 characters
+    lastname = models.CharField(max_length=255) # creates text field with max 255 characters
